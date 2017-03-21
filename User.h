@@ -1,22 +1,30 @@
+#ifndef USER_H
+#define USER_H
+#include <string>
+#include <vector>
+
+using namespace std;
+
 class User {
     private:
     double bal;
+    int accountNum;
     string name;
-    string accType;
     vector<User> u;
     
     public:
     User();
-    ~User();
+    User(string, double);
     void showAccount();
-    void depositMoney();
-    void withdrawMoney();
-    void createAccount();
+    void depositMoney(double);
+    void withdrawMoney(double);
+    void createAccount(string, double);
     void closeAccount();
     void changeInfo();
-    int calculateBal();
     string getName();
     double getBal();
-    string getAccType();
+    int getAccountNum();
     
 };
+
+#endif
